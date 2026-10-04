@@ -89,11 +89,12 @@ fn main() {
 
     }
 
+if price > 10_000{
+    price = price *95;
+    price = price/100;
+}
 
-/*if price > 10_000{
-    price = price * (95/100);
-    
-}*/
+
 println!("The price of your food is: {}",price);
 
     
