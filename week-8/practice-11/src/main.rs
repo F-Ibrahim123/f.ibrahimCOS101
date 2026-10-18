@@ -13,7 +13,7 @@ fn main() {
     println!("Index 0 to index 3 sliced = {:?}",slice2);
 
     //omit the end index
-    let slice3 = &numbers[2..1];
+    let slice3 = &numbers[2..];
     //This means the slice starts from index 2 and goes up to index 5(exclusive)
     println!("Index 2 to index 5 sliced = {:?}",slice3);
 
