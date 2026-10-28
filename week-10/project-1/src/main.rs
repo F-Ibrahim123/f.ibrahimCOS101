@@ -7,15 +7,19 @@ struct Laptops{
 impl Laptops{
     fn total_cost(&self)->u32{
         let mut brand1 = String::new();
-          println!("There are {} available {} laptops.",self.quantity,self.brand);
-          println!("How many {} Laptops do you want to buy? \n",self.brand);
+          println!("\nThere are {} available {} laptops.",self.quantity,self.brand);
+          println!("How many do you want to buy?");
           io::stdin().read_line(&mut  brand1).expect("This is an invalid input");
           let brand1:u32 = brand1.trim().parse().expect("This is an invalid input");
           
             let price = self.unit_price * brand1;
-          return price;
-          
+          return price;        
 }
+}
+impl Laptops{
+    fn price(&self){
+        println!("{}    -    {}",self.brand,self.unit_price);
+    }
 }
 fn main() {
     let lap1 = Laptops{
@@ -38,7 +42,12 @@ fn main() {
         quantity: 4,
         unit_price: 850_000
     };
-     println!("Welcome to Alaba Electronics! \n");
+     println!("Welcome to Alaba Electronics!\n ");
+     println!("Laptop Brand - Unit Price");
+     lap1.price();
+     lap2.price();
+     lap3.price();
+     lap4.price();
     let price1 = lap1.total_cost();
     let price2 = lap2.total_cost();
     let price3 = lap3.total_cost();
