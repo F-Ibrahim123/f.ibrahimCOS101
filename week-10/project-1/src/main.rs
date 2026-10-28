@@ -7,15 +7,15 @@ struct Laptops{
 impl Laptops{
     fn total_cost(&self)->u32{
         let mut brand1 = String::new();
+          println!("There are {} available {} laptops.",self.quantity,self.brand);
           println!("How many {} Laptops do you want to buy? \n",self.brand);
           io::stdin().read_line(&mut  brand1).expect("This is an invalid input");
           let brand1:u32 = brand1.trim().parse().expect("This is an invalid input");
-
+          
             let price = self.unit_price * brand1;
           return price;
           
-    }
-
+}
 }
 fn main() {
     let lap1 = Laptops{
